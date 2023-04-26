@@ -1,35 +1,24 @@
 <template>
-  <div class=" wrapper">
-    <div class="container">
-      <header class="header">
-        <HomePage msg="Carpet"/>
-
-
-
-
-      </header>
-    </div>
+  <div class="wrapper">
+    <MyHeader />
+    <MainMenu />
+    <router-view />
+    <MyFooter />
   </div>
-
-
-<!--  <img alt="Vue logo" src="./assets/logo.png">-->
-<!--  <HelloWorld msg="Welcome to Your Vue.js App"/>-->
 
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
-import HomePage from './components/HomePage.vue'
-
-
+import MyHeader from "@/components/MyHeader";
+import MyFooter from "@/components/MyFooter";
+import MainMenu from "@/components/MainMenu";
 
 export default {
   name: 'App',
   components: {
-    // HelloWorld,
-    HomePage,
-    DashBoard,
-    InputSearch,
+    MainMenu,
+    MyFooter,
+    MyHeader,
   }
 }
 </script>

@@ -2,15 +2,10 @@
   <div class="header-container container">
     <a href="" class="logo">Carpet</a>
     <!-- дочерние компоненты компонента HomePage. Как их расположить и зарегестрировать?-->
-    <InputSearch msg="InputSearch"/>
-    <DashBoard msg="Dashboard"/>
   </div>
 </template>
 
 <script>
-
-import DashBoard from './components/DashBoard.vue'
-import InputSearch from './components/InputSearch.vue'
 
 export default {
   name: "HomePage.vue",
@@ -18,8 +13,6 @@ export default {
     msg: String
   },
   components: {
-    DashBoard,
-    InputSearch,
   }
 }
 </script>
