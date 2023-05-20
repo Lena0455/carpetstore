@@ -22,6 +22,26 @@ const menuItems = [
     path: "/catalog",
   },
   {
+    name: "Услуги",
+    path: "/services",
+  },
+  {
+    name: "Доставка",
+    path: "/delivery",
+  },
+  {
+    name: "Оплата",
+    path: "/payment",
+  },
+  {
+    name: "Отзывы",
+    path: "/reviews",
+  },
+  {
+    name: "Акции",
+    path: "/promotion",
+  },
+  {
     name: "Контакты",
     path: "/contacts",
   },

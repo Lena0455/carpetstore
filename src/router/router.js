@@ -1,5 +1,15 @@
+
+/*
+Чтобы создать роутер, нам нужно извлечь
+createRouter и createWebHistory из Vue Router.
+createRouter позволяет нам создать новый экземпляр маршрутизатора,
+одновременно createWebHistory создавая историю HTML5, которая по сути является оболочкой для History API.
+Это позволяет Vue Router манипулировать адресом в адресной строке, когда мы перемещаемся между страницами
+*/
+
 import {createRouter, createWebHashHistory} from "vue-router"
 
+// маршруты, сопоставленные с компонентами
 export const router = createRouter({
     history: createWebHashHistory(),
     routes: [
@@ -11,6 +21,12 @@ export const router = createRouter({
         },
         {
             path: "/contacts", component: () => import("@/components/Contacts")
+        },
+        {
+            path: "/menu", component: () => import("@/components/MainMenu")
+        },
+        {
+            path: "/menu", component: () => import("@/components/MyFooter")
         },
     ]
 })
