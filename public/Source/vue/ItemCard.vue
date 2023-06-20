@@ -11,6 +11,10 @@
   </div>
 </template>
 
+<template>
+  <item-card v-for="item in items" :key="item.name"/>
+</template>
+
 <script setup>
 import {defineProps} from "vue";
 

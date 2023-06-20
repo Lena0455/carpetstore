@@ -1,11 +1,10 @@
 <template>
-  <InputSearch/>
-  <MainIcons/>
+<FilterItem />
 </template>
 
 <script>
 export default {
-  name: "MyHeader"
+  name: "CatalogFilters.vue"
 }
 </script>
 

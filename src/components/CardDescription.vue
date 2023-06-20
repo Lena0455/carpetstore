@@ -1,11 +1,10 @@
 <template>
-  <InputSearch/>
-  <MainIcons/>
+  <DescriptionItem/>
 </template>
 
 <script>
 export default {
-  name: "MyHeader"
+  name: "CardChoice.vue"
 }
 </script>
 

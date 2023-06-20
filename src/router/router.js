@@ -20,13 +20,16 @@ export const router = createRouter({
             path: "/catalog", component: () => import("@/components/CarpetCatalog")
         },
         {
-            path: "/contacts", component: () => import("@/components/Contacts")
-        },
-        {
             path: "/menu", component: () => import("@/components/MainMenu")
         },
         {
             path: "/menu", component: () => import("@/components/MyFooter")
         },
+        {
+            path: "/menu", component: () => import("@/components/CardProduct")
+        },
+        {
+            path: "/menu", component: () => import("@/components/ButtonCounter")
+        }
     ]
 })

@@ -1,10 +1,10 @@
 <template>
-  <h1>Contacts</h1>
+
 </template>
 
 <script>
 export default {
-  name: "ContactsPage"
+  name: "FilterItem.vue"
 }
 </script>
 

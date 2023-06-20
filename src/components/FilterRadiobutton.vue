@@ -1,11 +1,10 @@
 <template>
-  <InputSearch/>
-  <MainIcons/>
+
 </template>
 
 <script>
 export default {
-  name: "MyHeader"
+  name: "FilterRadiobutton.vue"
 }
 </script>
 

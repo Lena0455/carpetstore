@@ -1,4 +1,5 @@
 <template>
+  <Logo/>
   <div class="header-container container">
     <a href="" class="logo">Carpet</a>
     <!-- дочерние компоненты компонента HomePage. Как их расположить и зарегестрировать?-->

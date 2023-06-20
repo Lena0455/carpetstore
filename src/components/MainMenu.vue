@@ -1,8 +1,10 @@
+<!--Под капотом Vue компилирует template в высокооптимизированный код JavaScript.-->
 <template>
   <div>
-    <nav class="header__menu">
-      <ul class="menu__list">
-        <li v-for="item in menuItems" :key="item.name" class="menu__item">
+    <nav class="header-menu">
+      <ul class="menu-list">
+        <li v-for="item in menuItems" :key="item.name" class="menu-item">
+<!--          Наиболее простой формой привязки данных является интерполяция текста с использованием синтаксиса «усы» (двойные фигурные скобки)-->
           <router-link :to="item.path">{{item.name}}</router-link>
         </li>
       </ul>
@@ -61,7 +63,7 @@ li {
 a {
   color: #8342b9;
 }
-.menu__list {
+.menu-list {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;

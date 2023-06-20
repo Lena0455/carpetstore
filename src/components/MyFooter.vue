@@ -1,16 +1,16 @@
 <template>
   <h1>Footer</h1>
   <div class="footer">
-    <div class="footer__icons">
-      <ul class="icon__social-list">
-        <li v-for="item in footerIcons" :key="item.name" class="icon__social-item">
+    <div class="footer-icons">
+      <ul class="social-list">
+        <li v-for="item in footerIcons" :key="item.name" class="social-item">
          <router-link :to="item.path">{{item.path}}</router-link>
         </li>
       </ul>
       <!-- FOOTER -->
       <footer class="footer">
-        <div class="footer__row">
-          <div class="footer__text">2021-2022&copy;CARPET Интернет-магазин ковров</div>
+        <div class="footer-row">
+          <div class="footer-text">2021-2022&copy;CARPET Интернет-магазин ковров</div>
         </div>
       </footer>
       </div>
@@ -35,14 +35,14 @@ const footerIcons = [
 </script>
 
 <style scoped>
-.footer__icons {
+.footer-icons {
   padding: 10px 0 10px 0;
 }
-.footer__row {
+.footer-row {
   display: flex;
   justify-content: center;
 }
-.icon__social-list {
+.social-list {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -50,13 +50,13 @@ const footerIcons = [
   margin-bottom: 0;
   gap: 5px;
 }
-.icon__social-list {
+.social-list {
   margin-bottom: 10px;
 }
-.footer__text {
+.footer-text {
   font-size: 11px;
 }
-.icon__social-item {
+.social-item {
   cursor: pointer;
 }
 
@@ -66,7 +66,7 @@ const footerIcons = [
   border-radius: 6px;
 }
 
-.footer__text {
+.footer-text {
   /*color: $prcolor;*/
 }
 </style>

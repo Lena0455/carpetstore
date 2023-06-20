@@ -151,7 +151,7 @@ body {
   color: inherit;
 }
 
-.menu__list {
+.menu-list {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -166,11 +166,11 @@ body {
   color: $textcolor;
 }
 
-.menu__item:hover {
+.menu-item:hover {
   // transform: scale(1.1);
 }
 
-.search__container {
+.search-container {
   display: flex;
   flex-grow: 1;
 }
@@ -280,7 +280,7 @@ body {
   padding: 10px 0 10px 0;
 }
 
-.icon__social-list {
+.social-list {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -311,7 +311,7 @@ body {
   border-radius: 6px;
 }
 
-.footer__row {
+.footer-row {
   display: flex;
   justify-content: center;
 }
@@ -1095,7 +1095,7 @@ color: $prcolor;
 
 }
 
-.icon__social-list {
+.social-list {
   margin-bottom: 10px;
 }
 

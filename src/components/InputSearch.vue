@@ -1,27 +1,25 @@
 <template>
   <form>
-
-      <div class="search__container _search">
+      <div class="search-container _search">
         <input type="text" name="text" class="search" placeholder="Поиск..">
         <!-- <form action="#" method="get" enctype="multipart/form-data"></form> -->
         <input type="submit" name="submit" class="submit" value="Search">
       </div>
-
   </form>
 </template>
 
-<script>
-export default {
+<script setup>
+/*export default {
   name: "InputSearch.vue",
   props: {
     msg: String
   }
-}
+}*/
 </script>
 
 <style scoped>
 
-.search__container {
+.search-container {
   display: flex;
   flex-grow: 1;
 }
