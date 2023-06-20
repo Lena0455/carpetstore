@@ -1,7 +1,8 @@
 <template>
+<!-- Поле которое включает в себя увеличенное фото товара его описание, группу тегов и главную кнопку -->
   <h5>title</h5>
   <p>number of item</p>
-  <tags/>
+  <DescriptionTag/>
   <p>description</p>
   <p>price</p>
   <MainButton/>

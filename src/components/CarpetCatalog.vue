@@ -1,6 +1,7 @@
+<!-- Поле которое включает в себя поле фильтров и поле карточек -->
 <template>
-<!--  <CatalogFilters />-->
-<!--  <CatalogItem v-for="card in cards"... ><CatalogItem>-->
+  <CatalogFilters />
+<!--  <CatalogItem v-for="card in cards"... ><CatalogItem> -->
   <h1>Catalog</h1>
 </template>
 

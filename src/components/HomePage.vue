@@ -1,5 +1,12 @@
 <template>
-  <Logo/>
+  <!-- Поле которое включает в себя логотип, поиск по сайту, кнопку поиска, три иконки,
+  подсчет количества товара, главное меню сайта, карусель -->
+  <HeaderLogo/>
+  <InputSearch/>
+  <MainIcons/>
+  <ButtonCounter/>
+  <MainMenu/>
+  <MainCarousel.vue/>
   <div class="header-container container">
     <a href="" class="logo">Carpet</a>
     <!-- дочерние компоненты компонента HomePage. Как их расположить и зарегестрировать?-->
@@ -8,12 +15,16 @@
 
 <script>
 
+import MainCarousel
+import ButtonCounter from "@/components/ButtonCounter";
 export default {
   name: "HomePage.vue",
   props: {
     msg: String
   },
   components: {
+    ButtonCounter,
+    MainCarousel
   }
 }
 </script>

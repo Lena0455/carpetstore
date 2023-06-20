@@ -1,4 +1,6 @@
+<!-- Поле которое включает в себя иконки социальных сетей-->
 <template>
+  <MainIcons/>
   <h1>Footer</h1>
   <div class="footer">
     <div class="footer-icons">

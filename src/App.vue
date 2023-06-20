@@ -28,7 +28,7 @@ import MyHeader from "@/components/MyHeader";
 import MyFooter from "@/components/MyFooter";
 import MainMenu from "@/components/MainMenu";
 import CardProduct from "@/components/CardProduct";
-import InputSearch from "@/components/InputSearch";
+import InputSearch from "@/components/HeaderSearch";
 import ButtonCounter from "@/components/ButtonCounter.vue";
 import CardDescription from "@/components/CardDes"
 

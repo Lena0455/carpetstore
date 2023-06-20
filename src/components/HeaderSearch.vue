@@ -10,7 +10,7 @@
 
 <script setup>
 /*export default {
-  name: "InputSearch.vue",
+  name: "HeaderSearch.vue",
   props: {
     msg: String
   }

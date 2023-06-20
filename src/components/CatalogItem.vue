@@ -1,4 +1,5 @@
 <template>
+<!--  Одна карточка товара. Включает в себя фото товара, две иконки, стоимость товара и скидку -->
   <div class="img-block" v-for="item in props.items" :key="item.id">
     <div>{{ item.image }}
     </div>

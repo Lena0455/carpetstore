@@ -1,10 +1,14 @@
+<!-- Поле фильтр, которое включает в себя чекбоксы и радиокнопки -->
 <template>
-<FilterItem />
+  <FilterCheckbox/>
+  <FilterRadiobutton/>
 </template>
 
 <script>
+import FilterCheckboxhk
+import FilterRadiobutton
 export default {
-  name: "CatalogFilters.vue"
+  components: {FilterRadiobutton, FilterCheckbox}
 }
 </script>
 

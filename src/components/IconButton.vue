@@ -1,3 +1,4 @@
+<!--  кнопка добавления -->
 <template>
   <button class="item-social" @click="() => {
       // basket.push(item)

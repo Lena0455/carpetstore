@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: "FilterItem.vue"
+  name: "DescriptionTag.vue"
 }
 </script>
 
