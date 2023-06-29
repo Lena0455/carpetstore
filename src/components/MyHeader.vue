@@ -1,19 +1,20 @@
 <!-- Поле которое включает в себя логотип, поиск по сайту, кнопку поиска, три иконки,
 подсчет количества товара, главное меню сайта -->
 <template>
-  <HeaderLogo/>
-  <HeaderSearch/>
-  <ButtonCounter/>
-  <MainIcons/>
-  <MainMenu/>
+  <div>
+    <MainIcons/>
+    <HeaderSearch/>
+    <ButtonCounter/>
+    <MainMenu/>
+  </div>
+
 </template>
 
-<script>
+<script setup>
+import HeaderSearch from "@/components/HeaderSearch";
 import MainMenu from "@/components/MainMenu";
-export default {
-  name: "MyHeader",
-  components: {MainMenu}
-}
+import ButtonCounter from "@/components/ButtonCounter";
+
 </script>
 
 <style scoped>

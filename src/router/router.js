@@ -26,10 +26,13 @@ export const router = createRouter({
             path: "/menu", component: () => import("@/components/MyFooter")
         },
         {
-            path: "/menu", component: () => import("@/components/CardProduct")
+            path: "/menu", component: () => import("@/components/ButtonCounter")
         },
         {
-            path: "/menu", component: () => import("@/components/ButtonCounter")
+            path: "/menu", component: () => import("@/components/CarpetCart")
+        },
+        {
+            path: "/menu", component: () => import("@/components/CatalogItem")
         }
     ]
 })

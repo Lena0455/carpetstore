@@ -1,7 +1,6 @@
 <!--Под капотом Vue компилирует template в высокооптимизированный код JavaScript.-->
 <!-- Поле которое содержит в себе фиксированный набор тегов -->
 <template>
-  <HeaderTag/>
   <div>
     <nav class="header-menu">
       <ul class="menu-list">
@@ -15,8 +14,6 @@
 </template>
 
 <script setup>
-
-import HeaderTag
 
 const menuItems = [
   {

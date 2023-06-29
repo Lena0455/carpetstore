@@ -4,12 +4,12 @@
   <FilterRadiobutton/>
 </template>
 
-<script>
-import FilterCheckboxhk
-import FilterRadiobutton
-export default {
-  components: {FilterRadiobutton, FilterCheckbox}
-}
+<script setup>
+// import FilterCheckbox from "@/components/FiletrCheck"
+// import FilterRadiobutton from "@/components/Radiobuttons"
+// export default {
+//   components: {FilterRadiobutton, FilterCheckbox}
+// }
 </script>
 
 <style scoped>

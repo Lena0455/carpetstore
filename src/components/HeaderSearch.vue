@@ -9,12 +9,6 @@
 </template>
 
 <script setup>
-/*export default {
-  name: "HeaderSearch.vue",
-  props: {
-    msg: String
-  }
-}*/
 </script>
 
 <style scoped>
@@ -31,7 +25,7 @@
   left: 0;
   z-index: 50;
   /*background: $prcolor;*/
-  border-radius: 6px 0 0 6px;
+  border-radius: 0;
   margin: 0 0 0 32px;
   padding: 0 0 0 20px;
   width: 100%;

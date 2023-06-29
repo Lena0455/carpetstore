@@ -1,16 +1,18 @@
 <!--component registration part 3-->
+<!--Корневой элемент который содержит только основные разделы. Здесь содержиться массив ковров-->
 <template>
   <div class="wrapper">
     <div class="container">
-      <MyHeader/>
+      <HomePage/>
+<!--      <MyHeader/>-->
       <router-view/>
-      <InputSearch/>
-      <MainMenu/>
       <CardDescription/>
+      <CarpetCart/>
+      <MyFooter/>
 
 <!-- v-bind привязываем массив items     -->
       <CardProduct :items="items"></CardProduct>
-      <!--  <div v-for="item in basket" :key=item.name>{{item.name}}</div>-->
+        <div v-for="item in basket" :key=item.name>{{item.name}}</div>
       <h1>Here are many child components!</h1>
       <ButtonCounter />
       <MyFooter/>
@@ -24,13 +26,13 @@
 <!-- Создать массив ковров в корневом компоненте и передавать через пропс в дочерние-->
 <script setup>
 
-import MyHeader from "@/components/MyHeader";
+// import MyHeader from "@/components/MyHeader";
+import HomePage from "@/components/HomePage";
+import CarpetCart from "@/components/CarpetCart";
 import MyFooter from "@/components/MyFooter";
-import MainMenu from "@/components/MainMenu";
-import CardProduct from "@/components/CardProduct";
-import InputSearch from "@/components/HeaderSearch";
-import ButtonCounter from "@/components/ButtonCounter.vue";
-import CardDescription from "@/components/CardDes"
+
+
+// import CatalogItem from "@/components/CatalogItem";
 
 const items = [
   {
