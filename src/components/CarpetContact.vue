@@ -1,13 +1,10 @@
 <template>
-<!-- Включает в себя строку с описанием товара-->
-  <div>
-    <h1>Carousel</h1>
-  </div>
+<h1>Contact</h1>
 </template>
 
 <script>
 export default {
-  name: "MainCarousel.vue"
+  name: "CarpetContact.vue"
 }
 </script>
 

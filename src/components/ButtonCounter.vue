@@ -1,7 +1,7 @@
 <template>
-  <button @click="count++">
+  <h1><button @click="count++">
     You clicked me {{ count }} times.
-  </button>
+  </button></h1>
 </template>
 
 <script setup>
@@ -20,5 +20,10 @@ const count = ref(0)
 </script>
 
 <style scoped>
-
+h1 {
+  font-size: 25px;
+  text-align: center;
+  margin: 10px;
+  padding: 20px;
+}
 </style>

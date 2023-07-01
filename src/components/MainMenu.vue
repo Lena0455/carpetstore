@@ -2,6 +2,7 @@
 <!-- Поле которое содержит в себе фиксированный набор тегов -->
 <template>
   <div>
+<!--    <h1>MainMenu</h1>-->
     <nav class="header-menu">
       <ul class="menu-list">
         <li v-for="item in menuItems" :key="item.name" class="menu-item">

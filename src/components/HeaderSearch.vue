@@ -1,11 +1,12 @@
 <template>
+  <div class="search">
   <form>
       <div class="search-container _search">
         <input type="text" name="text" class="search" placeholder="Поиск..">
         <!-- <form action="#" method="get" enctype="multipart/form-data"></form> -->
         <input type="submit" name="submit" class="submit" value="Search">
       </div>
-  </form>
+  </form></div>
 </template>
 
 <script setup>
@@ -31,4 +32,17 @@
   width: 100%;
   flex-grow: 1;
 }
+h1 {
+  font-size: 25px;
+  text-align: center;
+  margin: 10px;
+  padding: 20px;
+}
+
+
+.header__container > form {
+  flex-grow: 1;
+}
+
+
 </style>

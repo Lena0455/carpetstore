@@ -1,15 +1,16 @@
 <template>
   <!-- Поле включает в себя Header и карусель -->
+
 <MyHeader/>
 <MainCarousel.vue/>
   <div class="header-container container">
-    <a href="" class="logo">Carpet</a>
+    <a href="" class="header__logo">Carpet</a>
     <!-- дочерние компоненты компонента HomePage. Как их расположить и зарегестрировать?-->
-  </div>
+
+  </div><h1>Home</h1>
 </template>
 
 <script setup>
-import MyHeader from "@/components/MyHeader";
 
 </script>
 
@@ -115,13 +116,6 @@ body {
 
 }
 
-.logo {
-  font-size: 32px;
-  font-weight: 400;
-
-  text-decoration: none;
-}
-
 .logo:hover {
   text-decoration: none;
 
@@ -149,5 +143,18 @@ li {
 
 a {
   color: #8342b9;
+}
+
+h1 {
+  font-size: 35px;
+  text-align: center;
+  margin: 10px;
+  padding: 20px;
+}
+.header__logo {
+font-size: 32px;
+  font-weight: 400;
+  /*color: $textcolor;*/
+  text-decoration: none;
 }
 </style>

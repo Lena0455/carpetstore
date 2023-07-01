@@ -3,18 +3,13 @@
 <template>
   <div class="wrapper">
     <div class="container">
-      <HomePage/>
-<!--      <MyHeader/>-->
+      <MyHeader/>
       <router-view/>
-      <CardDescription/>
+      <CatalogItem/>
       <CarpetCart/>
-      <MyFooter/>
-
 <!-- v-bind привязываем массив items     -->
       <CardProduct :items="items"></CardProduct>
         <div v-for="item in basket" :key=item.name>{{item.name}}</div>
-      <h1>Here are many child components!</h1>
-      <ButtonCounter />
       <MyFooter/>
 
     </div>
@@ -26,13 +21,12 @@
 <!-- Создать массив ковров в корневом компоненте и передавать через пропс в дочерние-->
 <script setup>
 
-// import MyHeader from "@/components/MyHeader";
-import HomePage from "@/components/HomePage";
+import MyHeader from "@/components/MyHeader";
+
 import CarpetCart from "@/components/CarpetCart";
 import MyFooter from "@/components/MyFooter";
+import CatalogItem from "@/components/CatalogItem";
 
-
-// import CatalogItem from "@/components/CatalogItem";
 
 const items = [
   {
@@ -87,6 +81,7 @@ items.forEach(item => console.log(item));
 </script>
 
 <style>
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

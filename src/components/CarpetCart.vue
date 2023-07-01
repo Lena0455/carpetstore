@@ -3,11 +3,11 @@
 -->
 <template>
   <div class="carpet-cart"></div>
-  {{ cart }}
+<!--  {{ cart }}-->
 </template>
 
 <script setup>
-const cart = 'Корзина'
+// const cart = 'Корзина'
 </script>
 
 <style scoped>

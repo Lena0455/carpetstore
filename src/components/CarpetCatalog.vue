@@ -12,5 +12,10 @@ export default {
 </script>
 
 <style scoped>
-
+h1 {
+  font-size: 25px;
+  text-align: center;
+  margin: 10px;
+  padding: 20px;
+}
 </style>

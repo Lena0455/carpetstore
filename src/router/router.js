@@ -23,16 +23,33 @@ export const router = createRouter({
             path: "/menu", component: () => import("@/components/MainMenu")
         },
         {
-            path: "/menu", component: () => import("@/components/MyFooter")
+            path: "/MyFooter", component: () => import("@/components/MyFooter")
         },
         {
-            path: "/menu", component: () => import("@/components/ButtonCounter")
+            path: "/CarpetCart", component: () => import("@/components/CarpetCart")
         },
         {
-            path: "/menu", component: () => import("@/components/CarpetCart")
+            path: "/CatalogItem", component: () => import("@/components/CatalogItem")
         },
         {
-            path: "/menu", component: () => import("@/components/CatalogItem")
-        }
+            path: "/Services", component: () => import("@/components/CarpetServices")
+        },
+        {
+            path: "/Delivery", component: () => import("@/components/CarpetDelivery")
+        },
+        {
+            path: "/Payment", component: () => import("@/components/CarpetPayment")
+        },
+        {
+            path: "/Promotion", component: () => import("@/components/CarpetPromotion")
+        },
+        {
+            path: "/Contacts", component: () => import("@/components/CarpetContact")
+        },
+        {
+            path: "/Reviews", component: () => import("@/components/CarpetReviews")
+        },
+
+
     ]
 })
