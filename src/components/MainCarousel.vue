@@ -2,6 +2,17 @@
 <!-- Включает в себя строку с описанием товара-->
   <div>
     <h1>Carousel</h1>
+    <carousel>
+      <slide>
+        Slide 1 Content
+      </slide>
+      <slide>
+        Slide 2 Content
+      </slide>
+      <slide>
+        Slide 3 Content
+      </slide>
+    </carousel>
   </div>
 </template>
 

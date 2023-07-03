@@ -140,7 +140,7 @@ body {
   overflow: hidden;
   min-height: 100%;
   margin: 0 auto;
-
+  background-color: #e9ecef;
   display: flex;
   flex-direction: column;
   max-width: 1000px;
@@ -155,6 +155,7 @@ body {
   flex-direction: column;
   max-width: 1000px;
   padding: 15px 30px 15px 30px;
+  background-color: #e9ecef;
 }
 
 .container {

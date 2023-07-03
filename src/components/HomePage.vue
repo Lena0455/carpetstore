@@ -1,13 +1,8 @@
 <template>
-  <!-- Поле включает в себя Header и карусель -->
-
-<MyHeader/>
-<MainCarousel.vue/>
-  <div class="header-container container">
-    <a href="" class="header__logo">Carpet</a>
-    <!-- дочерние компоненты компонента HomePage. Как их расположить и зарегестрировать?-->
-
-  </div><h1>Home</h1>
+  <!-- Поле включает в себя  карусель -->
+  <MainCarousel/>
+<!--    <MyHeader/>-->
+  <h1>Home</h1>
 </template>
 
 <script setup>
@@ -151,8 +146,9 @@ h1 {
   margin: 10px;
   padding: 20px;
 }
+
 .header__logo {
-font-size: 32px;
+  font-size: 32px;
   font-weight: 400;
   /*color: $textcolor;*/
   text-decoration: none;
