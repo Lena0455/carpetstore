@@ -111,6 +111,13 @@ body {
 
 }
 
+.logo {
+  font-size: 32px;
+  font-weight: 400;
+
+  text-decoration: none;
+}
+
 .logo:hover {
   text-decoration: none;
 

@@ -1,7 +1,6 @@
 <template>
     <swiper
-        :modules="modules"
-        :space-between="20"
+        space-between="20"
         :loop="true"
         :pagination="{clickable: true}"
         :autoplay="{
@@ -9,15 +8,16 @@
     disableOnInteraction:false,
     pauseOnMouseEnter: true
     }">
+      <swiper-slide v-for="text in swiperTextBase" :key="text.description">
+        <div>
+          <p>{{text.description}}</p>
+        </div>
+<!--        <img src="text.img">-->
+        <img :src="text.img" alt="image"/>
+      </swiper-slide>
     </swiper>
 
 
-    <swiper-slide v-for="text in swiperTextBase" :key="text.description">
-      <div>
-        <p>{{text.description}}</p>
-      </div>
-      <img src="text.img">
-    </swiper-slide>
   <!-- Включает в себя строку с описанием товара-->
   <div>
     <h1>Carousel</h1>
