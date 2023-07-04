@@ -1,21 +1,21 @@
 <template>
-    <swiper
-        space-between="20"
-        :loop="true"
-        :pagination="{clickable: true}"
-        :autoplay="{
+  <swiper
+      space-between="20"
+      :loop="true"
+      :pagination="{clickable: true}"
+      :autoplay="{
     delay: 7000,
     disableOnInteraction:false,
     pauseOnMouseEnter: true
     }">
-      <swiper-slide v-for="text in swiperTextBase" :key="text.description">
-        <div>
-          <p>{{text.description}}</p>
-        </div>
-<!--        <img src="text.img">-->
-        <img :src="text.img" alt="image"/>
-      </swiper-slide>
-    </swiper>
+    <swiper-slide v-for="text in carouselSlides" :key="text.description">
+      <div>
+        <p>{{ text.description }}</p>
+      </div>
+      <!--        <img src="text.img">-->
+      <img :src="text.img" alt="image"/>
+    </swiper-slide>
+  </swiper>
 
 
   <!-- Включает в себя строку с описанием товара-->
@@ -57,40 +57,29 @@
   </div>
 </template>
 
-<script>
-import {Swiper,SwiperSlide} from 'swiper/vue';
-import { Pagination, Autoplay } from 'swiper/modules';
+<script setup>
+import {Swiper, SwiperSlide} from 'swiper/vue';
+// import {Pagination, Autoplay} from 'swiper/modules';
 // import Swiper and modules styles
 import 'swiper/css';
 import 'swiper/css/pagination';
-
-
 import {ref} from 'vue'
-  export default {
-    name: 'App',
-    components: {
-      Swiper,
-      SwiperSlide,
-    },
-    setup() {
-      const swiperTextBase = ref([
-        {
-          description:'Ковер с треугольным рисунком',
-          img:'Source/img/pexels-max-vakhtbovych-6296925.jpg'
-        },
-        {
-          description:'Изысканный полосатый ковер',
-          img:'Source/img/pexels-max-vakhtbovych-6969866.jpg'
-        },
-        {
-          description:'Турецкий ковёр ручной работы',
-          img:'Source/img/pexels-max-vakhtbovych-6296925.jpg'
-        },
 
+const carouselSlides = ref([
+  {
+    description: 'Ковер с треугольным рисунком',
+    img: 'Source/img/pexels-max-vakhtbovych-6296925.jpg'
+  },
+  {
+    description: 'Изысканный полосатый ковер',
+    img: 'Source/img/pexels-max-vakhtbovych-6969866.jpg'
+  },
+  {
+    description: 'Турецкий ковёр ручной работы',
+    img: 'Source/img/pexels-max-vakhtbovych-6296925.jpg'
+  },
+]);
 
-      ]); return {modules: [Pagination, Autoplay], swiperTextBase}
-    }
-  }
 </script>
 
 <style scoped>
