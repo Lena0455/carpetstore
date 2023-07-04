@@ -1,5 +1,6 @@
 <!--component registration part 3-->
 <!--Корневой элемент который содержит только основные разделы. Здесь содержиться массив ковров-->
+
 <template>
   <div class="wrapper">
     <div class="container">

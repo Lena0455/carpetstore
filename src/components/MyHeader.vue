@@ -21,7 +21,6 @@
             <div class=""><img class="icon" src="/Source/icons/flags.svg" alt="cart">
             </div>
           </li>
-
           <!--        <input type="text" min="1" max="9" class="numb-min" placeholder="1">-->
           <ButtonCounter/>
           <li class="icon__item">
@@ -32,22 +31,20 @@
             <div class=""><img class="icon" src="/Source/icons/user.svg" alt="account">
             </div>
           </li>
-
         </ul>
       </icon>
     </div>
   </header>
   <MainIcons/>
-
   <MainMenu/>
-
-
+  <MainCarousel/>
 </template>
 
 <script setup>
 // import HeaderSearch from "@/components/HeaderSearch";
 import MainMenu from "@/components/MainMenu";
 import ButtonCounter from "@/components/ButtonCounter";
+import MainCarousel from "@/components/MainCarousel"
 
 </script>
 
@@ -172,22 +169,13 @@ body {
   outline: none;
 }
 
+element.style {
+}
+
 .search:focus-visible {
   outline: none;
   /*//outline-color: $logo-darck;*/
 }
-
-/*.submit {*/
-/*  !*background-color: $logo;*!*/
-/*  background-color:  #7954a3;*/
-/*  !*color: $prcolor;*!*/
-/*  !*background: #ffffff;*!*/
-/*  border-radius: 0 6px 6px 0;*/
-/*  padding: 10px;*/
-/*  margin-right: 32px;*/
-/*}*/
-
-
 .submit {
   background-color: #7954a3;
   color: #ffffff;
@@ -198,7 +186,7 @@ body {
 
 .submit:active {
   /*background-color: $prcolor;*/
-  background: #ffffff;
+  background: #ff7b00;
 
   /*color: $hovcolor;*/
 }

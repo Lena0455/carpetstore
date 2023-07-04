@@ -1,7 +1,7 @@
 <template>
-  <h1><button @click="count++">
+  <button class="numb-min" @click="count++">
  {{ count }}
-  </button></h1>
+  </button>
 
 </template>
 
@@ -21,10 +21,18 @@ const count = ref(0)
 </script>
 
 <style scoped>
-h1 {
-  font-size: 25px;
-  text-align: center;
-  margin: 1px;
-  padding: 2px;
+
+.numb-min {
+  position: absolute;
+  top: 9px;
+  right: 24px;
+  outline: none;
+  width: 20px;
+  height: 20px;
+  font-weight: 500;
+  font-size: 12px;
+  border-radius: 10px;
+  color: #495057;
+  background-color: #ffffff;
 }
 </style>
