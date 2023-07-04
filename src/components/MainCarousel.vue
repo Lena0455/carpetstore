@@ -1,5 +1,24 @@
 <template>
-<!-- Включает в себя строку с описанием товара-->
+    <swiper
+        :modules="modules"
+        :space-between="20"
+        :loop="true"
+        :pagination="{clickable: true}"
+        :autoplay="{
+    delay: 7000,
+    disableOnInteraction:false,
+    pauseOnMouseEnter: true
+    }">
+    </swiper>
+
+
+    <swiper-slide v-for="text in swiperTextBase" :key="text.description">
+      <div>
+        <p>{{text.description}}</p>
+      </div>
+      <img src="text.img">
+    </swiper-slide>
+  <!-- Включает в себя строку с описанием товара-->
   <div>
     <h1>Carousel</h1>
     <div id="demo" class="carousel slide" data-bs-ride="carousel">
@@ -23,7 +42,7 @@
           <img src="Source/img/pexels-max-vakhtbovych-6969866.jpg" alt="" class="d-block" style="width:100%">
           <div class="carousel-caption">
             <h3></h3>
-            <p>Изысканный полосатый ковер</p>
+            <p></p>
           </div>
         </div>
         <div class="carousel-item">
@@ -39,9 +58,39 @@
 </template>
 
 <script>
-export default {
-  name: "MainCarousel.vue"
-}
+import {Swiper,SwiperSlide} from 'swiper/vue';
+import { Pagination, Autoplay } from 'swiper/modules';
+// import Swiper and modules styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+
+import {ref} from 'vue'
+  export default {
+    name: 'App',
+    components: {
+      Swiper,
+      SwiperSlide,
+    },
+    setup() {
+      const swiperTextBase = ref([
+        {
+          description:'Ковер с треугольным рисунком',
+          img:'Source/img/pexels-max-vakhtbovych-6296925.jpg'
+        },
+        {
+          description:'Изысканный полосатый ковер',
+          img:'Source/img/pexels-max-vakhtbovych-6969866.jpg'
+        },
+        {
+          description:'Турецкий ковёр ручной работы',
+          img:'Source/img/pexels-max-vakhtbovych-6296925.jpg'
+        },
+
+
+      ]); return {modules: [Pagination, Autoplay], swiperTextBase}
+    }
+  }
 </script>
 
 <style scoped>
@@ -97,7 +146,7 @@ body {
 
 .grid-container-filter > div {
   padding: 10px 0 10px 0;
-//text-align: start;
+  text-align: start;
   cursor: pointer;
 }
 
@@ -127,6 +176,7 @@ p {
   margin-bottom: 0 !important;
   margin-right: 0;
 }
+
 a {
   text-decoration: none !important;
 }

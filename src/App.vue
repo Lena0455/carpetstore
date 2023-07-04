@@ -13,6 +13,10 @@
         <div v-for="item in basket" :key=item.name>{{item.name}}</div>
       <MyFooter/>
 
+<!--      <Slide/>-->
+<!--      <Pagination/>-->
+<!--      <Navigation/>-->
+
     </div>
   </div>
 
@@ -23,12 +27,12 @@
 <script setup>
 
 import MyHeader from "@/components/MyHeader";
-
 import CarpetCart from "@/components/CarpetCart";
 import MyFooter from "@/components/MyFooter";
 import CatalogItem from "@/components/CatalogItem";
-
-
+import { register } from 'swiper/element/bundle';
+// register Swiper custom elements
+register();
 const items = [
   {
     // (item)
