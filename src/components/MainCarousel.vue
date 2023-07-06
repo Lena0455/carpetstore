@@ -1,59 +1,28 @@
 <template>
-  <swiper
-      space-between="20"
-      :loop="true"
-      :pagination="{clickable: true}"
-      :autoplay="{
+  <swiper class="img-block element.style"
+          space-between="20"
+          :loop="true"
+          :pagination="{clickable: true}"
+          :autoplay="{
     delay: 7000,
     disableOnInteraction:false,
-    pauseOnMouseEnter: true
+    pauseOnMouseEnter: true,
+    button: true
+
     }">
     <swiper-slide v-for="text in carouselSlides" :key="text.description">
-      <div>
-        <p>{{ text.description }}</p>
+
+      <div class="carousel-item">
+        <img class="full" :src="text.img" alt="image"/>
+        <div class="carousel-text">
+          {{ text.description }}
+        </div>
       </div>
-      <!--        <img src="text.img">-->
-      <img :src="text.img" alt="image"/>
-    </swiper-slide>
+          </swiper-slide>
+<!--    <div class="swiper-pagination-bullet"></div>-->
   </swiper>
-
-
-  <!-- Включает в себя строку с описанием товара-->
   <div>
-    <h1>Carousel</h1>
-    <div id="demo" class="carousel slide" data-bs-ride="carousel">
-      <!-- Indicators/dots -->
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class=""></button>
-        <button type="button" data-bs-target="#demo" data-bs-slide-to="1" class="active"
-                aria-current="true"></button>
-        <button type="button" data-bs-target="#demo" data-bs-slide-to="2" class=""></button>
-      </div>
-      <!-- The slideshow/carousel -->
-      <div class="carousel-inner">
-        <div class="carousel-item active carousel-item-start">
-          <img src="Source/img/pexels-max-vakhtbovych-7195534.jpg" alt="" class="d-block" style="width:100%">
-          <div class="carousel-caption">
-            <h3></h3>
-            <p>Ковер с треугольным рисунком</p>
-          </div>
-        </div>
-        <div class="carousel-item carousel-item-next carousel-item-start">
-          <img src="Source/img/pexels-max-vakhtbovych-6969866.jpg" alt="" class="d-block" style="width:100%">
-          <div class="carousel-caption">
-            <h3></h3>
-            <p></p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="Source/img/pexels-max-vakhtbovych-6296925.jpg" alt="" class="d-block" style="width:100%">
-          <div class="carousel-caption">
-            <h3></h3>
-            <p>Турецкий ковёр ручной работы</p>
-          </div>
-        </div>
-      </div>
-    </div>
+    <!--    Не убирать div-->
   </div>
 </template>
 
@@ -68,7 +37,7 @@ import {ref} from 'vue'
 const carouselSlides = ref([
   {
     description: 'Ковер с треугольным рисунком',
-    img: 'Source/img/pexels-max-vakhtbovych-6296925.jpg'
+    img: '/Source/img/pexels-max-vakhtbovych-7195534.jpg'
   },
   {
     description: 'Изысканный полосатый ковер',
@@ -83,99 +52,41 @@ const carouselSlides = ref([
 </script>
 
 <style scoped>
-h1 {
-  font-size: 25px;
+ .swiper-pagination-bullet {
+  color: #ffffff !important;
+   width: 20px;
+   height: 20px;
+   --swiper-pagination-color: var(--swiper-theme-color);
+   --swiper-pagination-color: red;
+   --swiper-pagination-left: auto;
+   --swiper-pagination-right: 8px;
+   --swiper-pagination-bottom: 8px;
+   --swiper-pagination-top: auto;
+   --swiper-pagination-fraction-color: inherit;
+   --swiper-pagination-progressbar-bg-color: rgba(0, 0, 0, 0.25);
+   --swiper-pagination-progressbar-size: 4px;
+   --swiper-pagination-bullet-size: 8px;
+   --swiper-pagination-bullet-width: 8px;
+   --swiper-pagination-bullet-height: 8px;
+   --swiper-pagination-bullet-inactive-color: #000;
+   --swiper-pagination-bullet-inactive-opacity: 0.2;
+   --swiper-pagination-bullet-opacity: 1;
+   --swiper-pagination-bullet-horizontal-gap: 4px;
+   --swiper-pagination-bullet-vertical-gap: 6px;
+
+}
+
+.full {
+  width: 100%;
+  object-fit: cover;
+}
+
+.carousel-text {
   text-align: center;
-  margin: 10px;
-  padding: 20px;
+  color: #ffffff;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
-
-
-*,
-*::before,
-::after {
-  padding: 0;
-  margin: 0;
-  border: 0;
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-}
-
-ul,
-ol,
-li {
-  list-style: none;
-}
-
-img {
-  vertical-align: top;
-}
-
-h1,
-h2 {
-  font-weight: inherit;
-  font-size: inherit;
-}
-
-html,
-body {
-  height: 100%;
-  line-height: 1;
-  font-family: Montserrat !important;
-  font-weight: 400;
-}
-
-
-.header__container > form {
-  flex-grow: 1;
-}
-
-.grid-container-filter > div {
-  padding: 10px 0 10px 0;
-  text-align: start;
-  cursor: pointer;
-}
-
-span {
-  /*color: $textcolor;*/
-  padding: 0 2px 0 20px;
-}
-
-span-decoration {
-  text-decoration: line-through;
-  /*color: $textcolor;*/
-}
-
-price-white {
-  /*color: $prcolor;*/
-  padding: 8px 2px 8px 2px;
-}
-
-
-.div7
-.div#basket:nth-child(odd) {
-  /*background: $gainsboro;*/
-}
-
-
-p {
-  margin-bottom: 0 !important;
-  margin-right: 0;
-}
-
-a {
-  text-decoration: none !important;
-}
-
-.card-selected img {
-  filter: brightness(10);
-}
-
-.card-selected > p.some-class:last-child > #test {
-
-}
-
 </style>
