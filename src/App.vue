@@ -33,6 +33,7 @@ import CatalogItem from "@/components/CatalogItem";
 import { register } from 'swiper/element/bundle';
 // register Swiper custom elements
 register();
+
 const items = [
   {
     // (item)
@@ -82,7 +83,7 @@ const items = [
     id: 5,
   },
 ]
-items.forEach(item => console.log(item));
+
 </script>
 
 <style>

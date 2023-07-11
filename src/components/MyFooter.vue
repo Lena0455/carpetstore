@@ -1,8 +1,9 @@
 <!-- Поле которое включает в себя иконки социальных сетей-->
 <template>
-  <div>
+  <div class="footer-container">
     <MainIcons/>
-    <h1>Footer</h1>
+
+<!--    <div>Footer</div>-->
     <div class="footer">
       <div class="footer-icons">
         <ul class="social-list">
@@ -19,6 +20,7 @@
       </div>
     </div>
   </div>
+
 
 
 </template>
@@ -40,6 +42,9 @@ const footerIcons = [
 </script>
 
 <style scoped>
+.footer-container {
+  background-color: #8342b9;
+}
 .footer-icons {
   padding: 10px 0 10px 0;
 }
@@ -64,6 +69,7 @@ const footerIcons = [
 
 .footer-text {
   font-size: 11px;
+  color: #ffffff;
 }
 
 .social-item {
@@ -79,10 +85,19 @@ const footerIcons = [
 .footer-text {
   /*color: $prcolor;*/
 }
+
+.footer {
+  /*color: $prcolor;*/
+
+}
+
 h1 {
   font-size: 25px;
   text-align: center;
   margin: 10px;
   padding: 20px;
+}
+a {
+  color: #ffffff;
 }
 </style>

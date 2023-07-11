@@ -1,5 +1,5 @@
 <template>
-  <swiper class="img-block element.style"
+  <swiper
           space-between="20"
           :loop="true"
           :pagination="{clickable: true}"
@@ -12,14 +12,14 @@
     }">
     <swiper-slide v-for="text in carouselSlides" :key="text.description">
 
-      <div class="carousel-item">
+      <div>
         <img class="full" :src="text.img" alt="image"/>
         <div class="carousel-text">
           {{ text.description }}
         </div>
       </div>
-          </swiper-slide>
-<!--    <div class="swiper-pagination-bullet"></div>-->
+    </swiper-slide>
+<!--        <div class="swiper-pagination-bullet"></div>-->
   </swiper>
   <div>
     <!--    Не убирать div-->
@@ -52,29 +52,29 @@ const carouselSlides = ref([
 </script>
 
 <style scoped>
- .swiper-pagination-bullet {
-  color: #ffffff !important;
-   width: 20px;
-   height: 20px;
-   --swiper-pagination-color: var(--swiper-theme-color);
-   --swiper-pagination-color: red;
-   --swiper-pagination-left: auto;
-   --swiper-pagination-right: 8px;
-   --swiper-pagination-bottom: 8px;
-   --swiper-pagination-top: auto;
-   --swiper-pagination-fraction-color: inherit;
-   --swiper-pagination-progressbar-bg-color: rgba(0, 0, 0, 0.25);
-   --swiper-pagination-progressbar-size: 4px;
-   --swiper-pagination-bullet-size: 8px;
-   --swiper-pagination-bullet-width: 8px;
-   --swiper-pagination-bullet-height: 8px;
-   --swiper-pagination-bullet-inactive-color: #000;
-   --swiper-pagination-bullet-inactive-opacity: 0.2;
-   --swiper-pagination-bullet-opacity: 1;
-   --swiper-pagination-bullet-horizontal-gap: 4px;
-   --swiper-pagination-bullet-vertical-gap: 6px;
+/*.swiper-pagination-bullet1 {*/
+/*  color: #ffffff !important;*/
+/*  width: 20px;*/
+/*  height: 20px;*/
+/*  --swiper-pagination-color: var(--swiper-theme-color);*/
+/*  --swiper-pagination-color: red;*/
+/*  --swiper-pagination-left: auto;*/
+/*  --swiper-pagination-right: 8px;*/
+/*  --swiper-pagination-bottom: 8px;*/
+/*  --swiper-pagination-top: auto;*/
+/*  --swiper-pagination-fraction-color: inherit;*/
+/*  --swiper-pagination-progressbar-bg-color: rgba(0, 0, 0, 0.25);*/
+/*  --swiper-pagination-progressbar-size: 4px;*/
+/*  --swiper-pagination-bullet-size: 8px;*/
+/*  --swiper-pagination-bullet-width: 8px;*/
+/*  --swiper-pagination-bullet-height: 8px;*/
+/*  --swiper-pagination-bullet-inactive-color: #000;*/
+/*  --swiper-pagination-bullet-inactive-opacity: 0.2;*/
+/*  --swiper-pagination-bullet-opacity: 1;*/
+/*  --swiper-pagination-bullet-horizontal-gap: 4px;*/
+/*  --swiper-pagination-bullet-vertical-gap: 6px;*/
 
-}
+/*}*/
 
 .full {
   width: 100%;

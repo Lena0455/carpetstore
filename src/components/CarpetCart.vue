@@ -1,13 +1,12 @@
-<!--
-корзина, где отображаются добавленные ковры
--->
+
 <template>
-  <div class="carpet-cart"></div>
-<!--  {{ cart }}-->
+  <p> корзина, где отображаются добавленные ковры</p>
+
 </template>
 
 <script setup>
-// const cart = 'Корзина'
+
+// const basket = [];
 </script>
 
 <style scoped>

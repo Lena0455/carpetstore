@@ -1,11 +1,15 @@
 <template>
 <!--  Одна карточка товара. Включает в себя фото товара, две иконки, стоимость товара и скидку -->
-  <div class="img-block" v-for="item in props.items" :key="item.id">
-    <div>{{ item.image }}
-    </div>
-    <p>{{ getDiscount(item) }}rub. <span style="text-decoration: line-through"
+  <div class="card" v-for="item in props.items" :key="item.id">
+    <div>{{item.name}}</div>
+<!--    <div>{{ item.image }}</div>-->
+
+    <p>{{ getDiscount(item) }}rub. <span style=""
                                          v-if="item.discount">{{ item.price }}rub.</span></p>
-    <img src="/Source/img/uzbek-carpet-chivacarpet-237beige-brown-1-410x410.jpg">
+    <button @click="() => {
+      // basket.push(item)
+    }">add
+    </button>
   </div>
   <!--пример локальной регистрации компонента
   <ComponentA />-->
@@ -49,5 +53,11 @@ function getDiscount(item) {
   height: 30px;
   border-radius: 4px;
   font-size: 20px;
+}
+.card {
+  display: inline-block;
+  border: 1px solid black;
+  margin: 10px;
+  padding: 10px;
 }
 </style>
