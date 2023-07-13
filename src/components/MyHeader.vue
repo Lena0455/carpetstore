@@ -14,25 +14,9 @@
           <input type="submit" name="submit" class="submit" value="Search">
         </div>
       </form>
-      <icon class="header__icon _icon">
-        <ul class="icon__list">
-
-          <li class="icon__item">
-            <div class=""><img class="icon" src="/Source/icons/flags.svg" alt="cart">
-            </div>
-          </li>
           <!--        <input type="text" min="1" max="9" class="numb-min" placeholder="1">-->
           <ButtonCounter/>
-          <li class="icon__item">
-            <div class=""><img class="icon" src="/Source/icons/cart-f.svg" alt=""></div>
-          </li>
-
-          <li class="icon__item">
-            <div class=""><img class="icon" src="/Source/icons/user.svg" alt="account">
-            </div>
-          </li>
-        </ul>
-      </icon>
+          <CarpetCart></CarpetCart>
     </div>
   </header>
   <MainIcons/>
@@ -45,6 +29,8 @@
 import MainMenu from "@/components/MainMenu";
 import ButtonCounter from "@/components/ButtonCounter";
 import MainCarousel from "@/components/MainCarousel"
+import CarpetCart from "@/components/CarpetCart";
+import MainIcons from "@/components/MainIcons"
 
 </script>
 

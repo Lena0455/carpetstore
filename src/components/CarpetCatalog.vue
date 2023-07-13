@@ -2,8 +2,9 @@
 <template>
   <h1>Catalog</h1>
   <CatalogFilters />
+  <!-- v-bind or :items   привязываем массив   -->
     <CatalogItem :items="items"></CatalogItem>
-      <div v-for="item in items" :key=item.name>{{item.name}}</div>
+      <div v-for="item in items" :key=item.id>{{item.id}}</div>
 </template>
 
 <script setup>

@@ -2,7 +2,7 @@
 <!--  Одна карточка товара. Включает в себя фото товара, две иконки, стоимость товара и скидку -->
   <div class="card" v-for="item in props.items" :key="item.id">
     <div>{{item.name}}</div>
-<!--    <div>{{ item.image }}</div>-->
+    <div>{{ item.image }}</div>
 
     <p>{{ getDiscount(item) }}rub. <span style=""
                                          v-if="item.discount">{{ item.price }}rub.</span></p>

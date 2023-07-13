@@ -26,6 +26,7 @@ export const router = createRouter({
             path: "/MyFooter", component: () => import("@/components/MyFooter")
         },
         {
+            // позволяет переходить в корзину по нажатию на иконку корзины
             path: "/CarpetCart", component: () => import("@/components/CarpetCart")
         },
         {
@@ -49,6 +50,10 @@ export const router = createRouter({
         {
             path: "/Reviews", component: () => import("@/components/CarpetReviews")
         },
+        {
+            path: "/Icons", component: () => import("@/components/MainIcons")
+        },
+
 
 
     ]

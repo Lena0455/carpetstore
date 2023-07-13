@@ -9,8 +9,8 @@
       <CatalogItem/>
       <CarpetCart/>
 <!-- v-bind привязываем массив items     -->
-      <CardProduct :items="items"></CardProduct>
-        <div v-for="item in basket" :key=item.name>{{item.name}}</div>
+<!--      <CardProduct :items="items"></CardProduct>-->
+<!--        <div v-for="item in basket" :key=item.name>{{item.name}}</div>-->
       <MyFooter/>
 
 <!--      <Slide/>-->
@@ -33,56 +33,6 @@ import CatalogItem from "@/components/CatalogItem";
 import { register } from 'swiper/element/bundle';
 // register Swiper custom elements
 register();
-
-const items = [
-  {
-    // (item)
-    image: "../Source/img/uzbek-carpet-chivacarpet-237beige-brown-1-410x410.jpg",
-    price: 9790,
-    sale: true,
-    title: "Ковер c золотым орнаментом",
-    art: "HL-714-ZOL",
-    discount: 5,
-    id: 1,
-
-  },
-  {
-    image: "/Source/img/pexels-max-vakhtbovych-6890403.jpg",
-    price: 8790,
-    sale: false,
-    title: "Ковер выставочный",
-    art: "HL-714-IND",
-    discount: 0,
-    id: 2,
-  },
-  {
-    image: "/Source/img/turkish-carpet-opera-5828ecream-grey-oval-1-410x410.jpg",
-    price: 17790,
-    sale: false,
-    title: "Маленький серый ковер",
-    art: "HL-214-GR",
-    discount: 0,
-    id: 3,
-  },
-  {
-    image: "/Source/img/pexels-tatiana-syrikova-3932930.jpg",
-    price: 117790,
-    sale: false,
-    title: "Белая шкура",
-    art: "HL-714-IND",
-    discount: 0,
-    id: 4,
-  },
-  {
-    image: "/Source/img/turkish-carpet-vista-a068agrey-brown-1-410x410.jpg",
-    price: 790,
-    sale: true,
-    title: "Ковер с геометрическим рисунком",
-    art: "HL-719-KON",
-    discount: 2,
-    id: 5,
-  },
-]
 
 </script>
 
