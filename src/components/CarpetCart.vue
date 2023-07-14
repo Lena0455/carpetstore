@@ -1,4 +1,4 @@
-
+<!-- Корзина -->
 <template>
   <div></div>
 </template>

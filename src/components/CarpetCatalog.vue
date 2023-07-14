@@ -1,10 +1,11 @@
 <!-- Поле которое включает в себя поле фильтров и поле карточек -->
 <template>
   <h1>Catalog</h1>
-  <CatalogFilters />
-  <!-- v-bind or :items   привязываем массив   -->
-    <CatalogItem :items="items"></CatalogItem>
-      <div v-for="item in items" :key=item.id>{{item.id}}</div>
+  <CatalogFilters/>
+  <!-- v-bind or :items   привязываем массив к компоненту  -->
+  <CatalogItem :items="items"></CatalogItem>
+<!--  <router-link :to="text.path">{{text.image}}-->
+<!--    <img class="icon" :src="text.img" alt="image"/></router-link>-->
 </template>
 
 <script setup>
@@ -15,7 +16,7 @@ import CatalogItem from "@/components/CatalogItem";
 const items = [
   {
     // (item)
-    image: "../Source/img/uzbek-carpet-chivacarpet-237beige-brown-1-410x410.jpg",
+    img: "../Source/img/uzbek-carpet-chivacarpet-237beige-brown-1-410x410.jpg",
     price: 9790,
     sale: true,
     name: "Ковер c золотым орнаментом",
@@ -25,7 +26,7 @@ const items = [
 
   },
   {
-    image: "/Source/img/pexels-max-vakhtbovych-6890403.jpg",
+    img: "/Source/img/pexels-max-vakhtbovych-6890403.jpg",
     price: 8790,
     sale: false,
     name: "Ковер выставочный",
@@ -34,7 +35,7 @@ const items = [
     id: 2,
   },
   {
-    image: "/Source/img/turkish-carpet-opera-5828ecream-grey-oval-1-410x410.jpg",
+    img: "/Source/img/turkish-carpet-opera-5828ecream-grey-oval-1-410x410.jpg",
     price: 17790,
     sale: false,
     name: "Маленький серый ковер",
@@ -43,7 +44,7 @@ const items = [
     id: 3,
   },
   {
-    image: "/Source/img/pexels-tatiana-syrikova-3932930.jpg",
+    img: "/Source/img/pexels-tatiana-syrikova-3932930.jpg",
     price: 117790,
     sale: false,
     name: "Белая шкура",
@@ -52,7 +53,7 @@ const items = [
     id: 4,
   },
   {
-    image: "/Source/img/turkish-carpet-vista-a068agrey-brown-1-410x410.jpg",
+    img: "/Source/img/turkish-carpet-vista-a068agrey-brown-1-410x410.jpg",
     price: 790,
     sale: true,
     name: "Ковер с геометрическим рисунком",

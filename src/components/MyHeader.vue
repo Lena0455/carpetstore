@@ -15,11 +15,11 @@
         </div>
       </form>
           <!--        <input type="text" min="1" max="9" class="numb-min" placeholder="1">-->
-          <ButtonCounter/>
+          <ButtonCounter/><MainIcons/>
           <CarpetCart></CarpetCart>
     </div>
   </header>
-  <MainIcons/>
+
   <MainMenu/>
   <MainCarousel/>
 </template>
