@@ -1,11 +1,10 @@
 <!-- Поле которое включает в себя поле фильтров и поле карточек -->
 <template>
   <h1>Catalog</h1>
-
+  <!-- v-bind or :items   привязываем массив к компоненту  -->
   <div class="container-global-frame">
     <div class="grid-container-global">
-      <CatalogFilters/>
-      <!-- v-bind or :items   привязываем массив к компоненту  -->
+      <CatalogFilter :filters="filters"></CatalogFilter>
       <CatalogItem :items="items"></CatalogItem>
       <!--  <router-link :to="text.path">{{text.image}}-->
       <!--    <img class="icon" :src="text.img" alt="image"/></router-link>-->
@@ -17,7 +16,7 @@
 
 // import {ref} from "vue";
 import CatalogItem from "@/components/CatalogItem";
-import CatalogFilters from "@/components/CatalogFilters";
+import CatalogFilter from "@/components/CatalogFilter";
 // const basket = ref([]);
 const items = [
   {
@@ -68,6 +67,39 @@ const items = [
     id: 5,
   },
 ]
+const filters = [
+  {
+    title: "Бренд",
+    id: 1,
+  },
+  {
+    title: "Размер"
+  },
+  {
+    title: "Форма"
+  },
+  {
+    title: "Категория"
+  },
+  {
+    title: "Материал"
+  },
+  {
+    title: "Тип ворса"
+  },
+  {
+    title: "Высота ворса"
+  },
+  {
+    title: "Страна"
+  },
+  {
+    title: "Цвет"
+  },
+  {
+    title: "Цена"
+  },
+]
 
 </script>
 
@@ -78,22 +110,23 @@ h1 {
   margin: 10px;
   padding: 20px;
 }
+
 .container-global-frame {
   padding: 10px 0 10px 0;
   margin: 30px 0 30px 0;
 }
 
 
-   .grid-container-global {
-     display: grid;
-     grid-template-columns: repeat(2, 1fr);
-     grid-template-rows: repeat(2, auto);
-     grid-template-areas: 'filter card'
+.grid-container-global {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas: 'filter card'
                        'filter card'
                        'filetr card';
-     column-gap: 5%;
-     align-items: start;
-   }
+  column-gap: 5%;
+  align-items: start;
+}
 
 .grid-container-filter {
   grid-area: filter;
