@@ -1,17 +1,23 @@
 <!-- Поле которое включает в себя поле фильтров и поле карточек -->
 <template>
   <h1>Catalog</h1>
-  <CatalogFilters/>
-  <!-- v-bind or :items   привязываем массив к компоненту  -->
-  <CatalogItem :items="items"></CatalogItem>
-<!--  <router-link :to="text.path">{{text.image}}-->
-<!--    <img class="icon" :src="text.img" alt="image"/></router-link>-->
+
+  <div class="container-global-frame">
+    <div class="grid-container-global">
+      <CatalogFilters/>
+      <!-- v-bind or :items   привязываем массив к компоненту  -->
+      <CatalogItem :items="items"></CatalogItem>
+      <!--  <router-link :to="text.path">{{text.image}}-->
+      <!--    <img class="icon" :src="text.img" alt="image"/></router-link>-->
+    </div>
+  </div>
 </template>
 
 <script setup>
 
 // import {ref} from "vue";
 import CatalogItem from "@/components/CatalogItem";
+import CatalogFilters from "@/components/CatalogFilters";
 // const basket = ref([]);
 const items = [
   {
@@ -71,5 +77,25 @@ h1 {
   text-align: center;
   margin: 10px;
   padding: 20px;
+}
+.container-global-frame {
+  padding: 10px 0 10px 0;
+  margin: 30px 0 30px 0;
+}
+
+
+   .grid-container-global {
+     display: grid;
+     grid-template-columns: repeat(2, 1fr);
+     grid-template-rows: repeat(2, auto);
+     grid-template-areas: 'filter card'
+                       'filter card'
+                       'filetr card';
+     column-gap: 5%;
+     align-items: start;
+   }
+
+.grid-container-filter {
+  grid-area: filter;
 }
 </style>

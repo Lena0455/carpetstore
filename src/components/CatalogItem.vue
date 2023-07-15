@@ -2,19 +2,25 @@
   <!--  Одна карточка товара. Включает в себя фото товара, две иконки, стоимость товара и скидку -->
 
   <!--  Данные из родительского компонента передаются сюда в дочерний через props-->
-<div class="card-container, grid-container-card">
-  <div class="card" v-for="item in props.items" :key="item.id">
-    <div>{{ item.art }}</div>
-    <img class="img-block" :src="item.img" alt="image"/>
-    <p>{{ getDiscount(item) }}rub.
-      <span style=""
-            v-if="item.discount">{{ item.price }}rub.</span></p>
-    <button @click="() => {
+  <!--  <div class="grid-container-global">-->
+  <div class="card-container, grid-container-card">
+    <div class="card" v-for="item in props.items" :key="item.id">
+      <img class="img-block" :src="item.img" alt="image"/>
+      <button @click="() => {
       // basket.push(item)
     }">add
-    </button>
+      </button>
+      <div class="product-details">
+        <div class="product-price">
+          <p>{{item.price}} ₽</p>
+<!--          <p>{{ getDiscount(item) }} ₽ <span style="" v-if="item.discount">{{ item.price }} ₽</span></p>-->
+        </div>
+      </div>
+
+
+    </div>
   </div>
-  </div>
+  <!--  </div>-->
   <!--пример локальной регистрации компонента
   <ComponentA />-->
   <div>
@@ -35,10 +41,10 @@ import {defineProps} from "vue"; // импортируем макрос или �
 // определяем массив через props, константа принимает значение
 const props = defineProps(["items"]);
 
-
-function getDiscount(item) {
-  return item.discount ? item.price - (item.price / 100) * item.discount : item.price;
-}
+//
+// function getDiscount(item) {
+//   return item.discount ? item.price - (item.price / 100) * item.discount : item.price;
+// }
 
 </script>
 
@@ -53,8 +59,8 @@ function getDiscount(item) {
 
 .card {
   display: inline-block;
-  margin: 10px;
-  padding: 10px;
+  /*margin: 10px;*/
+  /*padding: 10px;*/
 }
 
 .grid-container-global > div {
@@ -72,5 +78,20 @@ function getDiscount(item) {
 
 .grid-container-card {
   grid-area: card;
+}
+
+.product-details {
+  border-radius: 0 0 6px 6px;
+  /*background-color: $logo-pur;*/
+
+  background-color: #ded3f1;
+}
+
+.product-price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+
 }
 </style>
