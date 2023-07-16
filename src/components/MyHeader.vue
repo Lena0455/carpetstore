@@ -15,7 +15,8 @@
         </div>
       </form>
           <!--        <input type="text" min="1" max="9" class="numb-min" placeholder="1">-->
-          <ButtonCounter/><MainIcons/>
+          <ButtonCounter/>
+      <MainIcons/>
           <CarpetCart></CarpetCart>
     </div>
   </header>

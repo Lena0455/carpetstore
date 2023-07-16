@@ -10,6 +10,9 @@
       <!--    <img class="icon" :src="text.img" alt="image"/></router-link>-->
     </div>
   </div>
+  <button class="success" @click="choiceCountry">ПPИМЕНИТЬ</button>
+<!--  {{ choiceCountry }}-->
+<!--  <MainButton/>-->
 </template>
 
 <script setup>
@@ -17,7 +20,9 @@
 // import {ref} from "vue";
 import CatalogItem from "@/components/CatalogItem";
 import CatalogFilter from "@/components/CatalogFilter";
+
 // const basket = ref([]);
+
 const items = [
   {
     // (item)
@@ -28,6 +33,7 @@ const items = [
     art: "HL-714-ZOL",
     discount: 5,
     id: 1,
+    country: "Китай"
 
   },
   {
@@ -38,6 +44,9 @@ const items = [
     art: "HL-714-IND",
     discount: 0,
     id: 2,
+
+    //добавление категории для работы фильтра
+    country: "Китай"
   },
   {
     img: "/Source/img/turkish-carpet-opera-5828ecream-grey-oval-1-410x410.jpg",
@@ -47,6 +56,7 @@ const items = [
     art: "HL-214-GR",
     discount: 0,
     id: 3,
+    country: "Россия"
   },
   {
     img: "/Source/img/pexels-tatiana-syrikova-3932930.jpg",
@@ -56,6 +66,7 @@ const items = [
     art: "HL-714-IND",
     discount: 0,
     id: 4,
+    country: "Китай"
   },
   {
     img: "/Source/img/turkish-carpet-vista-a068agrey-brown-1-410x410.jpg",
@@ -65,18 +76,23 @@ const items = [
     art: "HL-719-KON",
     discount: 2,
     id: 5,
+    country: "Россия"
   },
 ]
+const choiceCountry = items.filter( items =>  items.country === "Китай")
+
+// console.log (choiceCountry)
+// console.log(items)
 const filters = [
   {
-    title: "Бренд",
-    id: 1,
+    title: "Бренд"
+
   },
   {
     title: "Размер"
   },
   {
-    title: "Форма"
+    title: "Форма",
   },
   {
     title: "Категория"
