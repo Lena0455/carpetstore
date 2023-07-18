@@ -10,18 +10,25 @@
       <!--    <img class="icon" :src="text.img" alt="image"/></router-link>-->
     </div>
   </div>
+
+  <div v-for="item in catalog" :key=item.img>{{ item.img }}</div>
+
+  <div v-for="item in basket" :key=item.name>{{item.name}}</div>
+
   <button class="success" @click="choiceCountry">ПPИМЕНИТЬ</button>
-<!--  {{ choiceCountry }}-->
-<!--  <MainButton/>-->
+  <!--  {{ choiceCountry }}-->
+  <!--  <MainButton/>-->
 </template>
 
 <script setup>
 
-// import {ref} from "vue";
+
 import CatalogItem from "@/components/CatalogItem";
 import CatalogFilter from "@/components/CatalogFilter";
 
-// const basket = ref([]);
+import {ref} from "vue";
+const catalog = ref([])
+const basket = ref([]);
 
 const items = [
   {
@@ -79,7 +86,7 @@ const items = [
     country: "Россия"
   },
 ]
-const choiceCountry = items.filter( items =>  items.country === "Китай")
+const choiceCountry = items.filter(items => items.country === "Китай")
 
 // console.log (choiceCountry)
 // console.log(items)

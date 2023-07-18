@@ -17,7 +17,7 @@
           <!--        <input type="text" min="1" max="9" class="numb-min" placeholder="1">-->
           <ButtonCounter/>
       <MainIcons/>
-          <CarpetCart></CarpetCart>
+<!--          <CarpetCart></CarpetCart>-->
     </div>
   </header>
 
@@ -30,7 +30,7 @@
 import MainMenu from "@/components/MainMenu";
 import ButtonCounter from "@/components/ButtonCounter";
 import MainCarousel from "@/components/MainCarousel"
-import CarpetCart from "@/components/CarpetCart";
+// import CarpetCart from "@/components/CarpetCart";
 import MainIcons from "@/components/MainIcons"
 
 </script>

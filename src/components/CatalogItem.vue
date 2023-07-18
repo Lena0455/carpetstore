@@ -6,14 +6,18 @@
   <div class="card-container, grid-container-card">
     <div class="card" v-for="item in props.items" :key="item.id">
       <img class="img-block" :src="item.img" alt="image"/>
-      <button @click="() => {
-      // basket.push(item)
-    }">add
-      </button>
+
+      <p>
+        <button v-on:click="basket.push(item)">Добавить</button>
+      </p>
+      <!--      <button @click="() => {-->
+      <!--       basket.push(item)-->
+      <!--    }">add-->
+      <!--      </button>-->
       <div class="product-details">
         <div class="product-price">
-          <p>{{item.price}} ₽</p>
-<!--          <p>{{ getDiscount(item) }} ₽ <span style="" v-if="item.discount">{{ item.price }} ₽</span></p>-->
+          <p>{{ item.price }} ₽</p>
+          <!--          <p>{{ getDiscount(item) }} ₽ <span style="" v-if="item.discount">{{ item.price }} ₽</span></p>-->
         </div>
       </div>
 
@@ -32,15 +36,14 @@
 import ComponentA from './ComponentA.vue'-->
 
 <script setup>
-/* Функция отрисовки выбранного ковра */
 
 import {defineProps} from "vue"; // импортируем макрос или функция
-
-
 // export default {props: ['items']}
 // определяем массив через props, константа принимает значение
 const props = defineProps(["items"]);
 
+const basket = []
+console.log(basket)
 //
 // function getDiscount(item) {
 //   return item.discount ? item.price - (item.price / 100) * item.discount : item.price;
