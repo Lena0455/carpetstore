@@ -6,7 +6,6 @@
   <div class="card-container, grid-container-card">
     <div class="card" v-for="item in props.items" :key="item.id">
       <img class="img-block" :src="item.img" alt="image"/>
-
       <p>
         <button v-on:click="basket.push(item)">Добавить</button>
       </p>
