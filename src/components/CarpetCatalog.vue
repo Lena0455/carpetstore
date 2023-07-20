@@ -9,11 +9,12 @@
       <!--  <router-link :to="text.path">{{text.image}}-->
       <!--    <img class="icon" :src="text.img" alt="image"/></router-link>-->
     </div>
+
+    <div v-for="itemImage in catalog" :key=itemImage.img>{{ itemImage.img }}</div>
+
+    <div v-for="item in basket" :key=item.name>{{ item.name }}</div>
   </div>
 
-  <div v-for="item in catalog" :key=item.img>{{ item.img }}</div>
-
-  <div v-for="item in basket" :key=item.name>{{item.name}}</div>
 
   <button class="success" @click="choiceCountry">ПPИМЕНИТЬ</button>
   <!--  {{ choiceCountry }}-->
@@ -27,6 +28,7 @@ import CatalogItem from "@/components/CatalogItem";
 import CatalogFilter from "@/components/CatalogFilter";
 
 import {ref} from "vue";
+
 const catalog = ref([])
 const basket = ref([]);
 
@@ -86,14 +88,24 @@ const items = [
     country: "Россия"
   },
 ]
+
 const choiceCountry = items.filter(items => items.country === "Китай")
 
 // console.log (choiceCountry)
 // console.log(items)
+
+// Функция добавления объектов в массив
+// const basket = []
+// // отображает каждый элемент массива
+// // items.forEach(item => console.log(item));
+// items.forEach((item) => {
+//       basket.push(item)
+//     }
+// )
+// console.log(basket)
 const filters = [
   {
     title: "Бренд"
-
   },
   {
     title: "Размер"

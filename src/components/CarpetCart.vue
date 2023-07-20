@@ -3,6 +3,7 @@
   <div>
     <div class="wrapper-min">
       <div class="card" v-for="item in props.basket" :key="item.id">
+<!--        <div  v-for="item in items" :key = "item.id" >{{item}}</div>-->
         <div id="basket"></div>
         <div id="full-sum"></div>
         <div id="sum"></div>
