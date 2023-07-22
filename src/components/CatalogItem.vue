@@ -3,16 +3,16 @@
 
   <!--  Данные из родительского компонента передаются сюда в дочерний через props-->
   <!--  <div class="grid-container-global">-->
+<!--  <div v-for="item in basket" :key=item.name>-->
+<!--    {{ item.name }}-->
+<!--  </div>-->
   <div class="card-container, grid-container-card">
-    <div class="card" v-for="item in props.items" :key="item.id">
+    <div class="card">
 <!--      <img class="img-block" :src="item.img" alt="image"/>-->
-      <div v-for="item in basket" :key=item.name>
-        {{ item.name }}
-      </div>
-      <button class="red" @click="add">add</button>
+      <button class="red" @click="addToBasket(props.item)">add</button>
       <div class="product-details">
         <div class="product-price">
-          <p>{{ item.price }} ₽</p>
+          <p>{{ props.item?.price }} ₽</p>
           <!--          <p>{{ getDiscount(item) }} ₽ <span style="" v-if="item.discount">{{ item.price }} ₽</span></p>-->
         </div>
       </div>
@@ -31,21 +31,22 @@ import ComponentA from './ComponentA.vue'-->
 
 <script setup>
 
-import {defineProps} from "vue"; // импортируем макрос
+import {defineProps, ref} from "vue"; // импортируем макрос
 // export default {props: ['items']}
 // определяем массив через props
-const props = defineProps(["items"]);
+const props = defineProps(["item"]);
 
-// // Функция добавления объектов в массив массив
-const basket = []
+console.log(props.item);
 
-// отображает каждый элемент массива
-const add = function adding() {
-  items.forEach((item) => {
-        basket.push(item)
-      }
-  )}
-console.log(add)
+// массив с содержимым корзины
+const basket = ref([]);
+// const basket = [];
+
+// addToBasket отображает каждый элемент массива
+function addToBasket(item) {
+  // basket.push(item);
+  basket.value.push(item);
+}
 console.log(basket)
 
 

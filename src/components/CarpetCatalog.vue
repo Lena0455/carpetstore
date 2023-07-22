@@ -5,7 +5,10 @@
   <div class="container-global-frame">
     <div class="grid-container-global">
       <CatalogFilter :filters="filters"></CatalogFilter>
-      <CatalogItem :items="items"></CatalogItem>
+<!--      <CatalogItem :items="items"></CatalogItem>-->
+      <template v-for="item in items" :key="item.id">
+        <CatalogItem :item="item"/>
+      </template>
       <!--  <router-link :to="text.path">{{text.image}}-->
       <!--    <img class="icon" :src="text.img" alt="image"/></router-link>-->
     </div>
