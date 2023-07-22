@@ -5,22 +5,17 @@
   <!--  <div class="grid-container-global">-->
   <div class="card-container, grid-container-card">
     <div class="card" v-for="item in props.items" :key="item.id">
-      <img class="img-block" :src="item.img" alt="image"/>
+<!--      <img class="img-block" :src="item.img" alt="image"/>-->
       <div v-for="item in basket" :key=item.name>
         {{ item.name }}
       </div>
-      <button @click="() => {
-             basket.push(item)
-          }">add
-      </button>
+      <button class="red" @click="add">add</button>
       <div class="product-details">
         <div class="product-price">
           <p>{{ item.price }} ₽</p>
           <!--          <p>{{ getDiscount(item) }} ₽ <span style="" v-if="item.discount">{{ item.price }} ₽</span></p>-->
         </div>
       </div>
-
-
     </div>
   </div>
   <!--  </div>-->
@@ -36,23 +31,25 @@ import ComponentA from './ComponentA.vue'-->
 
 <script setup>
 
-// // Функция добавления объектов в массив массив
-const basket = []
-
-// // отображает каждый элемент массива
-// // items.forEach(item => console.log(item));
-// items.forEach((item) => {
-//       basket.push(item)
-//     }
-// )
-console.log(basket)
 import {defineProps} from "vue"; // импортируем макрос
 // export default {props: ['items']}
 // определяем массив через props
 const props = defineProps(["items"]);
 
+// // Функция добавления объектов в массив массив
+const basket = []
 
-//
+// отображает каждый элемент массива
+const add = function adding() {
+  items.forEach((item) => {
+        basket.push(item)
+      }
+  )}
+console.log(add)
+console.log(basket)
+
+
+
 // function getDiscount(item) {
 //   return item.discount ? item.price - (item.price / 100) * item.discount : item.price;
 // }
